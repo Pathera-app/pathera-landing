@@ -57,14 +57,7 @@ git checkout -b feat/your-feature-name
 
 ## Pull Request Process
 
-1. Push your changes to a feature branch.
-2. Open a pull request into `dev`.
-3. Ensure your PR:
-
-   * Has a clear title and description
-   * Passes all workflow checks
-   * Includes UI screenshots if it changes the design
-   * Contains meaningful commit messages
+Follow the [PUll_REQUEST_TEMPLATE]()
 
 ---
 
