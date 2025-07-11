@@ -5,6 +5,7 @@ on:
     branches: [dev, main]
   pull_request:
     branches: [dev, main]
+    types: [opened, closed]
 
 jobs:
   build-and-test:
@@ -30,3 +31,34 @@ jobs:
 
       - name: Run tests
         run: npm test || echo "No tests yet"
+
+      - name: Notify Slack on failure
+        if: failure()
+        run: |
+          curl -X POST -H 'Content-type: application/json' \
+            --data '{"text":"❌ Pathly CI failed on ${{ github.ref }} by ${{ github.actor }}"}' \
+            ${{ secrets.SLACK_WEBHOOK_URL }}
+
+      - name: Notify Slack on success
+        if: success()
+        run: |
+          curl -X POST -H 'Content-type: application/json' \
+            --data '{"text":"✅ Pathly CI succeeded on ${{ github.ref }} by ${{ github.actor }}"}' \
+            ${{ secrets.SLACK_WEBHOOK_URL }}
+
+  notify-on-pr:
+    if: github.event_name == 'pull_request'
+    runs-on: ubuntu-latest
+    steps:
+      - name: Notify Slack on PR opened
+        if: github.event.action == 'opened'
+        run: |
+          curl -X POST -H 'Content-type: application/json' \
+            --data '{"text":"🔔 Pull Request opened by ${{ github.actor }}: ${{ github.event.pull_request.title }}"}' \
+            ${{ secrets.SLACK_WEBHOOK_URL }}
+      - name: Notify Slack on PR merged
+        if: github.event.action == 'closed' && github.event.pull_request.merged == true
+        run: |
+          curl -X POST -H 'Content-type: application/json' \
+            --data '{"text":"🎉 Pull Request merged by ${{ github.actor }}: ${{ github.event.pull_request.title }}"}' \
+            ${{ secrets.SLACK_WEBHOOK_URL }}
