@@ -1,3 +1,7 @@
+<p align="center">
+  <img src="public/logo2.png" alt="Pathly Logo" width="120" />
+</p>
+
 # Pathly Landing Page
 
 **Pathly** is a platform that helps young people and students stay engaged with their career journey. It allows users to track events they've joined, earn points for participation, and see how they rank on a leaderboard. Pathly provides a personalized space that motivates users, keeps them organized, and builds a sense of community—all while supporting their growth in different fields.
