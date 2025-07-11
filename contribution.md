@@ -57,7 +57,7 @@ git checkout -b feat/your-feature-name
 
 ## Pull Request Process
 
-Follow the [PUll_REQUEST_TEMPLATE]()
+Follow the [PUll_REQUEST_TEMPLATE](.github/templates/pull_request_template.md)
 
 ---
 
