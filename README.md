@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="public/logo1-nobg.png" alt="Pathly Logo" width="400" />
+  <img src="public/logo1-nobg.png" alt="Pathly Logo" width="300" />
 </p>
 
 # Pathly Landing Page
