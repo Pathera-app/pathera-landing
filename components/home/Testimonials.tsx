@@ -58,7 +58,7 @@ function Testimonials() {
           </h2>
 
           <p className="mt-2 max-w-lg text-center text-base sm:text-lg text-white/70">
-            Here's what some of our users have to say about Pathera.
+            Here&apos;s what some of our users have to say about Pathera.
           </p> 
         </div>
 

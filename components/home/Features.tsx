@@ -2,17 +2,6 @@ import React from 'react'
 import { BentoCard, BentoGrid, CARDS } from "@/components/magicui/bento-grid";
 import { ShimmerButton } from '@/components/magicui/shimmer-button';
 
-interface FeatureCard {
-  name: string;
-  description: string;
-  background: string;
-  Icon: React.ElementType;
-  href: string;
-  cta: string;
-  className: string;
-}
-
-
 function Features() {
   return (
     <div className="bg-[#0B0F1A]">
