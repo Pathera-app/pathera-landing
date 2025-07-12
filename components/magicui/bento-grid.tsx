@@ -1,5 +1,4 @@
 import { buttonVariants } from "@/components/ui/button";
-import { Calendar } from "@/components/ui/calendar";
 import { Command } from "@/components/ui/command";
 import { cn } from "@/lib/utils";
 import {
@@ -8,6 +7,7 @@ import {
 	FileText,
 	Briefcase,
 	BookOpen,
+	LucideIcon
 } from "lucide-react";
 import Link from "next/link";
 import { ReactNode } from "react";
@@ -147,7 +147,7 @@ const BentoCard = ({
 	name: string;
 	className: string;
 	background: ReactNode;
-	Icon: any;
+	Icon: LucideIcon;
 	description: string;
 	href: string;
 	cta: string;

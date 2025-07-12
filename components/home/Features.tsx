@@ -1,6 +1,5 @@
 import React from 'react'
 import { BentoCard, BentoGrid, CARDS } from "@/components/magicui/bento-grid";
-import { FileText, BookOpen, Briefcase, Users } from 'lucide-react';
 import { ShimmerButton } from '@/components/magicui/shimmer-button';
 
 interface FeatureCard {

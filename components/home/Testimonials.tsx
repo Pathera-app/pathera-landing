@@ -20,7 +20,7 @@ const REVIEWS = [
     name: "Jemimah Omombo",
     username: "@jemimahomombo",
     rating: 5,
-    review: "It's clean and looks professional.",
+    review: "Pathera is clean and looks professional.",
   },
   {
     name: "Adel Hussain",

@@ -1,7 +1,6 @@
 import React from 'react'
 import { Card } from "@/components/ui/card";
 import { FileText, Search, Briefcase } from 'lucide-react';
-import { BentoCard, BentoGrid, CARDS } from "@/components/magicui/bento-grid";
 import { ShimmerButton } from '../magicui/shimmer-button';
 
 const PROCESS = [
