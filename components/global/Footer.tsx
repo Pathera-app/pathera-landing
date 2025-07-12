@@ -15,7 +15,7 @@ const Footer = () => {
 					<span className="mt-4 flex items-center text-neutral-200 text-sm">
 						Made by{" "}
 						<Link
-							href="https://pathera.ai"
+							href="/"
 							className="ml-1 font-semibold hover:underline"
 						>
 							Pathera Team &hearts;
@@ -29,7 +29,7 @@ const Footer = () => {
 							<Github className="size-4 hover:text-white" />
 						</Link>
 						<Link
-							href="https://www.linkedin.com/company/pathera"
+							href="https://www.linkedin.com/company/leaf-network/"
 							target="_blank"
 						>
 							<Linkedin className="size-4 hover:text-white" />
@@ -66,14 +66,6 @@ const Footer = () => {
 										Testimonials
 									</Link>
 								</li>
-								<li className="mt-2">
-									<Link
-										href="/integrations"
-										className="transition-all duration-300 hover:text-foreground"
-									>
-										Integrations
-									</Link>
-								</li>
 							</ul>
 						</div>
 						<div className="mt-10 flex flex-col md:mt-0">
@@ -83,7 +75,7 @@ const Footer = () => {
 							<ul className="mt-4 text-muted-foreground text-sm">
 								<li>
 									<Link
-										href="#"
+										href="https://dashboard.pathera.app/login"
 										className="transition-all duration-300 hover:text-foreground"
 									>
 										Interview Prep
@@ -91,7 +83,7 @@ const Footer = () => {
 								</li>
 								<li className="mt-2">
 									<Link
-										href="#"
+										href="https://dashboard.pathera.app/login"
 										className="transition-all duration-300 hover:text-foreground"
 									>
 										Resume Tips
@@ -99,7 +91,7 @@ const Footer = () => {
 								</li>
 								<li className="mt-2">
 									<Link
-										href="#"
+										href="https://dashboard.pathera.app/login"
 										className="transition-all duration-300 hover:text-foreground"
 									>
 										Career Guides
@@ -107,7 +99,7 @@ const Footer = () => {
 								</li>
 								<li className="mt-2">
 									<Link
-										href="#"
+										href="https://dashboard.pathera.app/login"
 										className="transition-all duration-300 hover:text-foreground"
 									>
 										Skill Assessment
@@ -122,15 +114,7 @@ const Footer = () => {
 							<ul className="mt-4 text-muted-foreground text-sm">
 								<li className="mt-2">
 									<Link
-										href="/blog"
-										className="transition-all duration-300 hover:text-foreground"
-									>
-										Blog
-									</Link>
-								</li>
-								<li className="mt-2">
-									<Link
-										href="/help"
+										href="https://dashboard.pathera.app/login"
 										className="transition-all duration-300 hover:text-foreground"
 									>
 										Support
@@ -143,7 +127,7 @@ const Footer = () => {
 							<ul className="mt-4 text-muted-foreground text-sm">
 								<li className="">
 									<Link
-										href="/about"
+										href="https://dashboard.pathera.app/login"
 										className="transition-all duration-300 hover:text-foreground"
 									>
 										About Us
@@ -151,7 +135,7 @@ const Footer = () => {
 								</li>
 								<li className="mt-2">
 									<Link
-										href="/privacy"
+										href="https://dashboard.pathera.app/login"
 										className="transition-all duration-300 hover:text-foreground"
 									>
 										Privacy Policy
@@ -159,7 +143,7 @@ const Footer = () => {
 								</li>
 								<li className="mt-2">
 									<Link
-										href="/terms"
+										href="https://dashboard.pathera.app/login"
 										className="transition-all duration-300 hover:text-foreground"
 									>
 										Terms & Conditions

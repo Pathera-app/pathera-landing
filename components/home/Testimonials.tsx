@@ -50,6 +50,7 @@ function Testimonials() {
     <section className="bg-[#0B0F1A] py-12 sm:py-16 lg:py-20">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div 
+          id="testimonials"
           className="flex w-full flex-col items-center justify-center space-y-4 sm:space-y-6"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}

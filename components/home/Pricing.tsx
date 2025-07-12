@@ -61,6 +61,7 @@ function Pricing() {
     <div className="bg-[#0B0F1A]">
       <div className="container mx-auto px-4">
         <motion.div 
+          id="pricing"
           className="flex w-full flex-col items-center justify-center py-8 lg:items-center"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -146,6 +147,11 @@ function Pricing() {
                     </div>
                     <Button 
                       className={`w-full ${plan.popular ? 'bg-[#22D3EE] text-white hover:bg-[#22D3EE]/90' : 'bg-white text-black hover:bg-white/90'}`}
+                      onClick={() => {
+                        if (plan.cta === "Get Started" || plan.cta === "Start Pro") {
+                          window.location.href = "https://dashboard.pathera.app/login";
+                        }
+                      }}
                     >
                       {plan.cta}
                     </Button>
