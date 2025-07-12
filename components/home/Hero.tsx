@@ -1,6 +1,9 @@
+'use client';
+
 import Link from 'next/link';
 import Image from 'next/image';
 import { BorderBeam } from '../magicui/border-beam';
+import { motion } from 'framer-motion';
 
 // Define companies data
 const COMPANIES = [
@@ -27,16 +30,27 @@ export function Hero() {
 
       <div className="container relative mx-auto px-4 pt-32 pb-16 text-center">
         {/* Small badge/label */}
-        <Link 
-          href="#features"
-          className="inline-flex items-center gap-2 px-4 py-2 mb-8 rounded-full bg-white/5 hover:bg-white/10 transition-colors border border-white/10 backdrop-blur-sm"
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.2 }}
         >
-          <span className="text-sm text-white/80">1000+ Students Already Using Pathera 🚀</span>
-          <span className="text-xs">→</span>
-        </Link>
+          <Link 
+            href="#features"
+            className="inline-flex items-center gap-2 px-4 py-2 mb-8 rounded-full bg-white/5 hover:bg-white/10 transition-colors border border-white/10 backdrop-blur-sm"
+          >
+            <span className="text-sm text-white/80">1000+ Students Already Using Pathera 🚀</span>
+            <span className="text-xs">→</span>
+          </Link>
+        </motion.div>
 
         {/* Main heading */}
-        <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6 tracking-tight">
+        <motion.h1 
+          className="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6 tracking-tight"
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.4 }}
+        >
           Your Complete
           <br />
           Career{' '}
@@ -44,15 +58,25 @@ export function Hero() {
             Development
           </span>
           {' '}Platform
-        </h1>
+        </motion.h1>
         
         {/* Subtitle */}
-        <p className="text-lg md:text-xl text-white/60 max-w-2xl mx-auto mb-12">
+        <motion.p 
+          className="text-lg md:text-xl text-white/60 max-w-2xl mx-auto mb-12"
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.6 }}
+        >
           AI-powered CV review, practice assessments, work experience opportunities, interview prep and more - all in one place.
-        </p>
+        </motion.p>
 
         {/* CTA Button */}
-        <div className="flex justify-center mb-24">
+        <motion.div 
+          className="flex justify-center mb-24"
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.8 }}
+        >
           <Link
             href="/register"
             className="group inline-flex items-center justify-center gap-2 px-5 py-3 rounded-lg bg-[#0078D7] hover:bg-[#0066B8] transition-all duration-200 text-sm font-medium text-white hover:text-white"
@@ -74,11 +98,15 @@ export function Hero() {
               />
             </svg>
           </Link>
-        </div>
+        </motion.div>
 
         {/* Dashboard Video */}
-        
-        <div className="relative mx-auto max-w-5xl">
+        <motion.div 
+          className="relative mx-auto max-w-5xl"
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 1, delay: 1 }}
+        >
           <div className="absolute inset-0 bg-gradient-to-t from-[#0B0F1A] via-transparent to-transparent z-10" />
           <div className="relative rounded-2xl overflow-hidden border border-white/10 shadow-2xl bg-[#151823] h-[300px] sm:h-[400px] md:h-[500px] lg:h-[600px]">
           <BorderBeam
@@ -105,10 +133,15 @@ export function Hero() {
             </video>
           </div>
           <BorderBeam duration={8} size={100} />
-        </div>
+        </motion.div>
 
         {/* Companies Section */}
-        <div className="py-25">
+        <motion.div 
+          className="py-25"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 1, delay: 1.2 }}
+        >
           <div className="mx-auto px-4 md:px-8">
             <h2 className="text-center font-medium text-neutral-400 text-sm uppercase mb-12">
               OUR MEMBERS HAVE SECURED OFFERS FROM
@@ -149,7 +182,7 @@ export function Hero() {
               </div>
             </div>
           </div>
-        </div>
+        </motion.div>
       </div>
     </section>
   );
