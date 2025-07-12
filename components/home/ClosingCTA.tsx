@@ -40,7 +40,7 @@ export function ClosingCTA() {
             transition={{ duration: 0.8, delay: 0.4 }}
           >
             <Button>
-              <Link href="/sign-in">Start your journey</Link>
+              <Link href="https://dashboard.pathera.app/login">Start your journey</Link>
               <ArrowRightIcon className="ml-2 h-4 w-4" />
             </Button>
           </motion.div>

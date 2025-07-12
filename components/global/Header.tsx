@@ -69,7 +69,7 @@ export function Header() {
           {/* CTA Button */}
           <div className="flex items-center gap-4">
             <Link
-              href="/get-started"
+              href="https://dashboard.pathera.app/login"
               className="inline-flex items-center justify-center rounded-lg px-4 py-1.5 text-sm font-[var(--font-weight-semibold)] text-white bg-white/10 hover:bg-white/20 transition-colors"
             >
               Get Started

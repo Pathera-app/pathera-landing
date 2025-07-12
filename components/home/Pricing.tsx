@@ -147,6 +147,11 @@ function Pricing() {
                     </div>
                     <Button 
                       className={`w-full ${plan.popular ? 'bg-[#22D3EE] text-white hover:bg-[#22D3EE]/90' : 'bg-white text-black hover:bg-white/90'}`}
+                      onClick={() => {
+                        if (plan.cta === "Get Started" || plan.cta === "Start Pro") {
+                          window.location.href = "https://dashboard.pathera.app/login";
+                        }
+                      }}
                     >
                       {plan.cta}
                     </Button>

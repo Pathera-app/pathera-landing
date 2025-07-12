@@ -78,7 +78,7 @@ export function Hero() {
           transition={{ duration: 0.8, delay: 0.8 }}
         >
           <Link
-            href="/register"
+            href="https://dashboard.pathera.app/login"
             className="group inline-flex items-center justify-center gap-2 px-5 py-3 rounded-lg bg-[#0078D7] hover:bg-[#0066B8] transition-all duration-200 text-sm font-medium text-white hover:text-white"
           >
             Start Your Career Journey
