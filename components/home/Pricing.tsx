@@ -1,0 +1,151 @@
+'use client'
+import React, { useState } from 'react'
+import { Card } from "@/components/ui/card";
+import { CreditCard, Check } from 'lucide-react';
+import { ShimmerButton } from '../magicui/shimmer-button';
+import { Button } from '../ui/button';
+import { Switch } from '../ui/switch';
+
+const PRICING_PLANS = [
+  {
+    name: "Free",
+    description: "Perfect for getting started with your career journey",
+    price: { monthly: 0, yearly: 0 },
+    features: [
+      "CV Builder (1 practice/24 hours)",
+      "Free Community Access",
+      "AI Interview Practice (1 practice/24 hours)",
+      "Community Access",
+      "Limited Learning Resources"
+    ],
+    cta: "Get Started",
+    popular: false
+  },
+  {
+    name: "Pro",
+    description: "Ideal for active job seekers and career changers",
+    price: { monthly: 2.99, yearly: 29.99 },
+    features: [
+      "Unlimited AI Interview Sessions",
+      "Advanced CV Builder & Analytics",
+      "Premium Learning Resources",
+      "Priority Support",
+      "Community Access",
+      "Early Access to New Features"
+    ],
+    cta: "Start Pro",
+    popular: true
+  },
+  {
+    name: "Enterprise",
+    description: "Custom solutions for organizations and teams",
+    price: "Contact Us",
+    features: [
+      "Custom AI Interview Scenarios",
+      "Team CV Management",
+      "Dedicated Support",
+      "Custom Integration Options",
+      "Advanced Analytics & Reporting",
+      "Volume Discounts"
+    ],
+    cta: "Contact Sales",
+    popular: false
+  }
+];
+
+function Pricing() {
+  const [isYearly, setIsYearly] = useState(false);
+
+  return (
+    <div className="bg-[#0B0F1A]">
+      <div className="container mx-auto px-4">
+        <div className="flex w-full flex-col items-center justify-center py-8 lg:items-center">
+          <ShimmerButton className="shadow-2xl">
+            <span className="whitespace-pre-wrap text-center text-sm font-medium leading-none tracking-tight text-white lg:text-lg">
+              Pricing
+            </span>
+          </ShimmerButton>
+          
+          <h2 className="mt-6 text-center font-medium text-3xl text-white md:text-5xl lg:text-center">
+            Choose Your Career Journey
+          </h2>
+          
+          <p className="mt-4 max-w-lg text-center text-lg text-white/70 lg:text-center">
+            Select a plan that best fits your career development needs
+          </p>
+
+          <div className="flex items-center gap-3 mt-8">
+            <span className="text-white/70">Monthly</span>
+            <Switch
+              checked={isYearly}
+              onCheckedChange={setIsYearly}
+              className="data-[state=checked]:bg-[#22D3EE]"
+            />
+            <span className="text-white/70">Yearly</span>
+            {isYearly && (
+              <span className="ml-2 text-sm text-[#22D3EE]">Save 16%</span>
+            )}
+          </div>
+        </div>
+
+        <div className="max-w-6xl mx-auto">
+          <div className="grid w-full grid-cols-1 gap-8 py-12 md:grid-cols-2 lg:grid-cols-3">
+            {PRICING_PLANS.map((plan, id) => (
+              <Card 
+                key={id} 
+                className={`group relative border ${plan.popular ? 'border-[#22D3EE]/40' : 'border-white/20'} bg-black/20 p-6 px-8 transition-all duration-300 hover:border-white/40 hover:-translate-y-1 hover:shadow-xl overflow-hidden`}
+              >
+                <div className="flex w-full flex-col items-start justify-center relative z-10">
+                  {plan.popular && (
+                    <span className="absolute -top-6 -right-6 bg-white/10 px-6 py-1 text-sm text-white/70 rotate-12">
+                      Most Popular
+                    </span>
+                  )}
+                  <h3 className="text-xl font-medium text-white">
+                    {plan.name}
+                  </h3>
+                  <p className="mt-2 text-white/70 text-sm">
+                    {plan.description}
+                  </p>
+                  <div className="mt-6 mb-6">
+                    <span className="text-4xl font-bold text-white">
+                      {typeof plan.price === 'string' 
+                        ? plan.price 
+                        : `£${isYearly ? plan.price.yearly : plan.price.monthly}`}
+                    </span>
+                    {typeof plan.price !== 'string' && (
+                      <span className="text-white/70 ml-2">{isYearly ? '/year' : '/month'}</span>
+                    )}
+                  </div>
+                  <div className="space-y-3 mb-6">
+                    {plan.features.map((feature, idx) => (
+                      <div key={idx} className="flex items-center gap-2">
+                        <Check className="h-5 w-5 text-[#22D3EE]" />
+                        <span className="text-white/70">{feature}</span>
+                      </div>
+                    ))}
+                  </div>
+                  <Button 
+                    className={`w-full ${plan.popular ? 'bg-[#22D3EE] text-white hover:bg-[#22D3EE]/90' : 'bg-white text-black hover:bg-white/90'}`}
+                  >
+                    {plan.cta}
+                  </Button>
+                </div>
+                <div className="absolute inset-0 transition-all duration-500 group-hover:opacity-100 opacity-0 bg-gradient-to-br from-[#0B0F1A] via-[#1a1f2e] to-[#2d3449]" />
+              </Card>
+            ))}
+          </div>
+        </div>
+
+        <div className="flex justify-center items-center gap-2 pb-12">
+          <CreditCard className="h-5 w-5 text-white/70" />
+          <span className="text-white/70">
+            No credit card required for free plan
+          </span>
+        </div>
+      </div>
+    </div>
+  )
+}
+
+export default Pricing 

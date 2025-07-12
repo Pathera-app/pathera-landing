@@ -1,5 +1,20 @@
 import Link from 'next/link';
+import Image from 'next/image';
 import { BorderBeam } from '../magicui/border-beam';
+
+// Define companies data
+const COMPANIES = [
+  { name: 'Amazon', logo: '/companies/amazon.svg' },
+  { name: 'Google', logo: '/companies/google.svg' },
+  { name: 'Microsoft', logo: '/companies/microsoft.svg' },
+  { name: 'Apple', logo: '/companies/apple.svg' },
+  { name: 'ARM', logo: '/companies/arm.svg' },
+  { name: 'Goldman Sachs', logo: '/companies/goldmansachs.svg' },
+  { name: 'Cisco', logo: '/companies/cisco.svg' },
+  { name: 'IBM', logo: '/companies/ibm.svg' },
+  { name: 'Rolls-Royce', logo: '/companies/rollsroyce.svg' },
+  { name: 'Vodafone', logo: '/companies/vodafone.svg' },
+];
 
 export function Hero() {
   return (
@@ -65,7 +80,7 @@ export function Hero() {
         
         <div className="relative mx-auto max-w-5xl">
           <div className="absolute inset-0 bg-gradient-to-t from-[#0B0F1A] via-transparent to-transparent z-10" />
-          <div className="relative rounded-2xl overflow-hidden border border-white/10 shadow-2xl bg-[#151823] h-[600px]">
+          <div className="relative rounded-2xl overflow-hidden border border-white/10 shadow-2xl bg-[#151823] h-[300px] sm:h-[400px] md:h-[500px] lg:h-[600px]">
           <BorderBeam
             duration={6}
             size={400}
@@ -83,13 +98,57 @@ export function Hero() {
               loop 
               muted 
               playsInline
-              className="w-full h-full object-cover scale-110 translate-y-20"
+              className="w-full h-full object-cover md:scale-110 md:translate-y-20"
             >
               <source src="/dashboard.mp4" type="video/mp4" />
               Your browser does not support the video tag.
             </video>
           </div>
           <BorderBeam duration={8} size={100} />
+        </div>
+
+        {/* Companies Section */}
+        <div className="py-25">
+          <div className="mx-auto px-4 md:px-8">
+            <h2 className="text-center font-medium text-neutral-400 text-sm uppercase mb-12">
+              OUR MEMBERS HAVE SECURED OFFERS FROM
+            </h2>
+            <div className="relative overflow-hidden">
+              {/* Gradient overlays for scroll effect */}
+              <div className="absolute left-0 top-0 bottom-0 w-20 bg-gradient-to-r from-[#0B0F1A] to-transparent z-10" />
+              <div className="absolute right-0 top-0 bottom-0 w-20 bg-gradient-to-l from-[#0B0F1A] to-transparent z-10" />
+              
+              {/* Scrolling container */}
+              <div className="flex overflow-hidden">
+                <div className="animate-scroll flex items-center gap-x-20 py-8">
+                  {/* First set of logos */}
+                  {COMPANIES.map((company) => (
+                    <div key={company.name} className="flex-shrink-0">
+                      <Image
+                        src={company.logo}
+                        alt={company.name}
+                        width={150}
+                        height={150}
+                        className="h-16 w-auto brightness-0 invert opacity-70 hover:opacity-100 transition-opacity"
+                      />
+                    </div>
+                  ))}
+                  {/* Duplicate set of logos for seamless loop */}
+                  {COMPANIES.map((company) => (
+                    <div key={`${company.name}-duplicate`} className="flex-shrink-0">
+                      <Image
+                        src={company.logo}
+                        alt={company.name}
+                        width={150}
+                        height={150}
+                        className="h-16 w-auto brightness-0 invert opacity-70 hover:opacity-100 transition-opacity"
+                      />
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </section>
