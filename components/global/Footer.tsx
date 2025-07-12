@@ -66,14 +66,6 @@ const Footer = () => {
 										Testimonials
 									</Link>
 								</li>
-								<li className="mt-2">
-									<Link
-										href="/integrations"
-										className="transition-all duration-300 hover:text-foreground"
-									>
-										Integrations
-									</Link>
-								</li>
 							</ul>
 						</div>
 						<div className="mt-10 flex flex-col md:mt-0">
@@ -122,15 +114,7 @@ const Footer = () => {
 							<ul className="mt-4 text-muted-foreground text-sm">
 								<li className="mt-2">
 									<Link
-										href="/blog"
-										className="transition-all duration-300 hover:text-foreground"
-									>
-										Blog
-									</Link>
-								</li>
-								<li className="mt-2">
-									<Link
-										href="/help"
+										href="mailto:tobi.sal@pathera.app"
 										className="transition-all duration-300 hover:text-foreground"
 									>
 										Support

@@ -61,6 +61,7 @@ function Pricing() {
     <div className="bg-[#0B0F1A]">
       <div className="container mx-auto px-4">
         <motion.div 
+          id="pricing"
           className="flex w-full flex-col items-center justify-center py-8 lg:items-center"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
