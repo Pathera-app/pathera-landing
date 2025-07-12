@@ -1,5 +1,29 @@
+'use client';
+
+import * as React from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
+
+interface NavLink {
+  title: string;
+  href: string;
+}
+
+// Navigation Links Data
+const NAV_LINKS: NavLink[] = [
+  {
+    title: "Features",
+    href: "/#features",
+  },
+  {
+    title: "Pricing",
+    href: "/#pricing",
+  },
+  {
+    title: "Help",
+    href: "/#help",
+  },
+];
 
 export function Header() {
   return (
@@ -18,32 +42,16 @@ export function Header() {
           </Link>
 
           {/* Main Navigation */}
-          <nav className="hidden md:flex items-center justify-center gap-8">
-            <div className="relative group">
-              <button className="flex items-center gap-1 text-sm font-[var(--font-weight-medium)] text-white/70 hover:text-white transition-colors">
-                Features
-                <svg width="10" height="6" viewBox="0 0 10 6" fill="none" className="ml-1">
-                  <path d="M1 1L5 5L9 1" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
-                </svg>
-              </button>
-            </div>
-            <Link href="/pricing" className="text-sm font-[var(--font-weight-medium)] text-white/70 hover:text-white transition-colors">
-              Pricing
-            </Link>
-            <Link href="/enterprise" className="text-sm font-[var(--font-weight-medium)] text-white/70 hover:text-white transition-colors">
-              Enterprise
-            </Link>
-            <div className="relative group">
-              <button className="flex items-center gap-1 text-sm font-[var(--font-weight-medium)] text-white/70 hover:text-white transition-colors">
-                Resources
-                <svg width="10" height="6" viewBox="0 0 10 6" fill="none" className="ml-1">
-                  <path d="M1 1L5 5L9 1" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
-                </svg>
-              </button>
-            </div>
-            <Link href="/changelog" className="text-sm font-[var(--font-weight-medium)] text-white/70 hover:text-white transition-colors">
-              Changelog
-            </Link>
+          <nav className="hidden lg:flex items-center gap-8">
+            {NAV_LINKS.map((link) => (
+              <Link
+                key={link.title}
+                href={link.href}
+                className="text-sm font-medium text-white/70 hover:text-white bg-transparent"
+              >
+                {link.title}
+              </Link>
+            ))}
           </nav>
 
           {/* CTA Button */}

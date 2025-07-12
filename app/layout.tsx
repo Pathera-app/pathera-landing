@@ -22,6 +22,18 @@ export const metadata: Metadata = {
     ]
   },
   manifest: "/manifest.webmanifest",
+  themeColor: "#0B0F1A",
+  viewport: {
+    width: 'device-width',
+    initialScale: 1,
+    maximumScale: 1,
+    viewportFit: 'cover',
+  },
+  appleWebApp: {
+    capable: true,
+    statusBarStyle: 'black-translucent',
+    title: "Pathera",
+  },
   openGraph: {
     title: "Pathera | Complete Career Development Platform",
     description: "AI-powered career development platform for students aged 16-25. Get CV reviews, practice assessments, and work experience opportunities.",
@@ -41,8 +53,13 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={`${inter.variable}`}>
-      <body className="antialiased">
+    <html lang="en" className="dark">
+      <head>
+        <meta name="theme-color" content="#0B0F1A" />
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+      </head>
+      <body className={`${inter.variable} bg-[#0B0F1A] min-h-screen`}>
         {children}
       </body>
     </html>
