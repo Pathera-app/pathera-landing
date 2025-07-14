@@ -1,6 +1,11 @@
 # Allow all crawlers
 User-agent: *
 Allow: /
+Disallow: /api/
+Disallow: /_next/static/
 
 # Sitemap location
-Sitemap: https://pathera.app/sitemap.xml 
+Sitemap: https://pathera.app/sitemap.xml
+
+# Crawl-delay
+Crawl-delay: 1 
