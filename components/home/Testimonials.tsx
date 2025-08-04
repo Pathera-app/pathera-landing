@@ -26,8 +26,8 @@ const REVIEWS = [
     review: "Pathera is clean and looks professional.",
   },
   {
-    name: "Adel Hussain",
-    username: "@adelhussain",
+    name: "Adel Hussein",
+    username: "@adelhussein",
     rating: 5,
     review: "The AI interview practice has been invaluable in preparing me for real interviews.",
   },

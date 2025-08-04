@@ -117,7 +117,7 @@ function Pricing() {
                 >
                   <div className="flex w-full flex-col items-start justify-center relative z-10">
                     {plan.popular && (
-                      <span className="absolute -top-6 -right-6 bg-white/10 px-6 py-1 text-sm text-white/70 rotate-12">
+                      <span className="absolute -top-4 -right-4 bg-white/10 backdrop-blur-sm px-4 py-1 text-xs font-medium text-white/90 rotate-12 border border-white/20 rounded-sm">
                         Most Popular
                       </span>
                     )}
@@ -148,7 +148,7 @@ function Pricing() {
                     <Button 
                       className={`w-full ${plan.popular ? 'bg-[#22D3EE] text-white hover:bg-[#22D3EE]/90' : 'bg-white text-black hover:bg-white/90'}`}
                       onClick={() => {
-                        if (plan.cta === "Get Started" || plan.cta === "Start Pro") {
+                        if (plan.cta === "Get Started" || plan.cta === "Start Pro" || plan.cta === "Contact Sales") {
                           window.location.href = "https://dashboard.pathera.app/login";
                         }
                       }}
