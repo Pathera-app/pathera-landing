@@ -39,7 +39,7 @@ export function Header() {
   };
 
   return (
-    <header className="fixed top-0 w-full z-50 border-b border-white/[0.1] bg-[#0a0b14]/80 backdrop-blur-md py-4 lg:py-6">
+    <header className="fixed top-0 w-full z-50 border-b border-white/[0] bg-[#0a0b14]/0 backdrop-blur-md py-4 lg:py-6">
       <div className="container mx-auto px-4">
         <div className="flex h-16 items-center justify-between">
           {/* Logo */}
