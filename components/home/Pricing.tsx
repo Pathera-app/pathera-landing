@@ -117,9 +117,17 @@ function Pricing() {
                 >
                   <div className="flex w-full flex-col items-start justify-center relative z-10">
                     {plan.popular && (
-                      <span className="absolute -top-4 -right-4 bg-white/10 backdrop-blur-sm px-4 py-1 text-xs font-medium text-white/90 rotate-12 border border-white/20 rounded-sm">
-                        Most Popular
-                      </span>
+                      <div className="absolute -top-3 -right-3 z-[9999]">
+                        <div className="relative">
+                          <div className="absolute inset-0 bg-gradient-to-r from-[#22D3EE] to-[#06B6D4] rounded-full blur-sm opacity-60"></div>
+                          <div className="relative bg-gradient-to-r from-[#22D3EE] to-[#06B6D4] px-4 py-2 rounded-full shadow-xl">
+                            <div className="flex items-center gap-2">
+                              <div className="w-2 h-2 bg-white rounded-full animate-pulse"></div>
+                              <span className="text-white font-semibold text-xs tracking-wide">BEST VALUE</span>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
                     )}
                     <h3 className="text-xl font-medium text-white">
                       {plan.name}

@@ -181,16 +181,16 @@ export default function RootLayout({
           dangerouslySetInnerHTML={{
             __html: JSON.stringify([
               {
-                '@context': 'https://schema.org',
-                '@type': 'WebSite',
+              '@context': 'https://schema.org',
+              '@type': 'WebSite',
                 name: 'Pathera: #1 Student Work Experience Platform',
-                url: 'https://pathera.app',
+              url: 'https://pathera.app',
                 description: 'Find your perfect work experience placement for Years 10-13. AI-powered CV review, practice assessments, tech, finance, medical & engineering opportunities. Trusted by UK schools and students for GCSE, A-Level work experience and career development.',
-                potentialAction: {
-                  '@type': 'SearchAction',
-                  'target': 'https://pathera.app/search?q={search_term_string}',
-                  'query-input': 'required name=search_term_string'
-                }
+              potentialAction: {
+                '@type': 'SearchAction',
+                'target': 'https://pathera.app/search?q={search_term_string}',
+                'query-input': 'required name=search_term_string'
+              }
               },
               {
                 '@context': 'https://schema.org',
