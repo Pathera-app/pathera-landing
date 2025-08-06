@@ -39,17 +39,17 @@ export function Header() {
   };
 
   return (
-    <header className="fixed top-0 w-full z-50 border-b border-white/[0.1] bg-[#0a0b14]/80 backdrop-blur-md">
+    <header className="fixed top-0 w-full z-50 border-b border-white/[0.1] bg-[#0a0b14]/80 backdrop-blur-md py-4 lg:py-6">
       <div className="container mx-auto px-4">
         <div className="flex h-16 items-center justify-between">
           {/* Logo */}
           <Link href="/" className="flex items-center">
             <Image
               src="/logo1-nobg.png"
-              alt="Pathly Logo"
-              width={150}
-              height={150}
-              className="object-contain"
+              alt="Pathera Logo"
+              width={300}
+              height={300}
+              className="object-contain w-48 h-12 md:w-56 md:h-14 lg:w-64 lg:h-16 xl:w-72 xl:h-18"
             />
           </Link>
 
