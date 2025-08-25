@@ -39,7 +39,7 @@ export function Hero() {
             href="#features"
             className="inline-flex items-center gap-2 px-4 py-2 mb-8 rounded-full bg-white/5 hover:bg-white/10 transition-colors border border-white/10 backdrop-blur-sm"
           >
-            <span className="text-sm text-white/80">1000+ Students Already Using Pathera 🚀</span>
+            <span className="text-sm text-white/80">3000+ Students Already Using Pathera 🚀</span>
             <span className="text-xs">→</span>
           </Link>
         </motion.div>
